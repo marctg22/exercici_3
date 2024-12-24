@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EnemicsStats" load_steps=2 format=3 uid="uid://br3rjdoivwrlg"]
+
+[ext_resource type="Script" path="res://scripts/enemics_stats.gd" id="1_fv2rq"]
+
+[resource]
+script = ExtResource("1_fv2rq")
+nom = "mob 2"
+starting_health = 30
+max_health = 30
+atac = 2

@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://bv775ciem6j1w"]
+
+[ext_resource type="PackedScene" uid="uid://jnsgqm42lhci" path="res://escenes/player_scene.tscn" id="2_pn8l5"]
+[ext_resource type="Script" path="res://scripts/start_battle.gd" id="3_d2obi"]
+[ext_resource type="PackedScene" uid="uid://dvki50r0j4dui" path="res://escenes/enemic_scene.tscn" id="4_q2bin"]
+
+[node name="game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ui" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="ui" node_paths=PackedStringArray("h_box_container") groups=["battle"]]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_d2obi")
+h_box_container = NodePath("HBoxContainer")
+enemic_scene = ExtResource("4_q2bin")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ui/PanelContainer"]
+layout_mode = 2
+
+[node name="PCPlayerScene" parent="ui/PanelContainer/HBoxContainer" instance=ExtResource("2_pn8l5")]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ui/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "start"
+
+[connection signal="pressed" from="ui/PanelContainer/HBoxContainer/Button" to="ui/PanelContainer" method="_on_button_pressed"]
