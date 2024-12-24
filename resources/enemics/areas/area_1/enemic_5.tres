@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_iivh5")
 nom = "mob 5"
-starting_health = 60
-max_health = 60
+starting_health = 10
+max_health = 10
 atac = 5

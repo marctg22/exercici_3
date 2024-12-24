@@ -1,0 +1,10 @@
+res://escenes/game.tscn
+res://scripts/player.gd
+res://scripts/enemic.gd
+res://scripts/start_battle.gd
+res://escenes/enemic_scene.tscn
+res://resources/enemics/areas/area_1/enemic_5.tres
+res://resources/enemics/areas/area_1/enemic_2.tres
+res://resources/enemics/areas/area_1/enemic_3.tres
+res://resources/enemics/areas/area_1/enemic_4.tres
+res://resources/enemics/areas/area_1/enemic_1.tres

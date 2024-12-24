@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_mvdaw")
 nom = "mob 3"
-starting_health = 40
-max_health = 40
+starting_health = 10
+max_health = 10
 atac = 3
